@@ -1,10 +1,12 @@
 package org.ait.herokuapp.pages;
 
-import org.ait.herokuapp.pages.alert.AlertPage;
+import org.ait.herokuapp.pages.alertsFrameWindows.AlertPage;
+import org.ait.herokuapp.pages.alertsFrameWindows.FramePage;
 import org.ait.herokuapp.pages.brockenImg.BrokenImagesPage;
 import org.ait.herokuapp.pages.newTab.WindowPage;
 import org.ait.herokuapp.pages.simple.AbTestingPage;
 import org.ait.herokuapp.pages.simple.DisappearingElementsPage;
+import org.ait.herokuapp.pages.widgets.SliderPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -61,5 +63,21 @@ click(formLink);
         click(getBrokenImages);
         return new BrokenImagesPage(driver);
 
+    }
+
+    @FindBy(xpath = "//a[.='Frames']")
+    WebElement frames;
+
+    public FramePage getFramePage() {
+        click(frames);
+        return new FramePage(driver);
+    }
+
+    @FindBy(xpath = "//a[.='Horizontal Slider']")
+    WebElement slider;
+
+    public SliderPage getSliderPage() {
+        click(slider);
+        return new SliderPage(driver);
     }
 }

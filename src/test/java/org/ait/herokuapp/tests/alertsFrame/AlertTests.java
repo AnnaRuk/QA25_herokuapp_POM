@@ -1,6 +1,6 @@
-package org.ait.herokuapp.tests.alert;
+package org.ait.herokuapp.tests.alertsFrame;
 
-import org.ait.herokuapp.pages.alert.AlertPage;
+import org.ait.herokuapp.pages.alertsFrameWindows.AlertPage;
 import org.ait.herokuapp.pages.HomePage;
 import org.ait.herokuapp.tests.TestBase;
 import org.testng.annotations.BeforeMethod;

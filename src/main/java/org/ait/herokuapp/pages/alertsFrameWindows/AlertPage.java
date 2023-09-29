@@ -1,4 +1,4 @@
-package org.ait.herokuapp.pages.alert;
+package org.ait.herokuapp.pages.alertsFrameWindows;
 
 import org.ait.herokuapp.pages.BasePage;
 import org.openqa.selenium.Alert;
