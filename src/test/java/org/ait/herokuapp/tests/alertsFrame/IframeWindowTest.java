@@ -1,7 +1,7 @@
 package org.ait.herokuapp.tests.alertsFrame;
 
 import org.ait.herokuapp.pages.HomePage;
-import org.ait.herokuapp.pages.alertsFrameWindows.FramePage;
+import org.ait.herokuapp.pages.alertsFrameWindows.IframePage;
 import org.ait.herokuapp.tests.TestBase;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -16,8 +16,18 @@ public class IframeWindowTest extends TestBase {
 
     @Test
     public void iframesTest(){
-
-        new FramePage(driver).clickIframeButton()
+        new IframePage(driver).clickIframeButton()
                 .returnListOfFrames().switchToIframeByIndex(0);
     }
+
+  @Test
+  public void switchToIframeByIdTest(){
+       new IframePage(driver).clickIframeButton()
+               .switchToIframeById();
+  }
+
+
+
+
+
 }

@@ -1,7 +1,8 @@
 package org.ait.herokuapp.pages;
 
 import org.ait.herokuapp.pages.alertsFrameWindows.AlertPage;
-import org.ait.herokuapp.pages.alertsFrameWindows.FramePage;
+import org.ait.herokuapp.pages.alertsFrameWindows.IframePage;
+import org.ait.herokuapp.pages.alertsFrameWindows.NestedFramePage;
 import org.ait.herokuapp.pages.brockenImg.BrokenImagesPage;
 import org.ait.herokuapp.pages.newTab.WindowPage;
 import org.ait.herokuapp.pages.simple.AbTestingPage;
@@ -68,9 +69,9 @@ click(formLink);
     @FindBy(xpath = "//a[.='Frames']")
     WebElement frames;
 
-    public FramePage getFramePage() {
+    public IframePage getFramePage() {
         click(frames);
-        return new FramePage(driver);
+        return new IframePage(driver);
     }
 
     @FindBy(xpath = "//a[.='Horizontal Slider']")
@@ -79,5 +80,11 @@ click(formLink);
     public SliderPage getSliderPage() {
         click(slider);
         return new SliderPage(driver);
+    }
+
+
+    public NestedFramePage getNestedFramePage() {
+        click(frames);
+        return new NestedFramePage(driver);
     }
 }

@@ -1,7 +1,6 @@
 package org.ait.herokuapp.pages.alertsFrameWindows;
 
 import org.ait.herokuapp.pages.BasePage;
-import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,17 +8,17 @@ import org.openqa.selenium.support.FindBy;
 
 import java.util.List;
 
-public class FramePage extends BasePage {
+public class IframePage extends BasePage {
 
 
-    public FramePage(WebDriver driver) {
+    public IframePage(WebDriver driver) {
         super(driver);
     }
 
     @FindBy(xpath = "//a[contains(text(),'iFrame')]")
     WebElement iframes2;
 
-    public FramePage clickIframeButton(){
+    public IframePage clickIframeButton(){
         click(iframes2);
         return this;
     }
@@ -27,22 +26,27 @@ public class FramePage extends BasePage {
 
     @FindBy(tagName = "iframe")
     List<WebElement> iframes;
-    public FramePage returnListOfFrames() {
-        System.out.println("Total numbers iframes is" + iframes.size());
+    public IframePage returnListOfFrames() {
+        //1. == 1
+        System.out.println("1. Total numbers iframes is " + iframes.size());
+        //2. == 1
         JavascriptExecutor js = (JavascriptExecutor) driver;
         Integer numberOgIframes = Integer.parseInt(js.executeScript("return window.length").toString());
-        System.out.println("The total numbers of iframes: " + numberOgIframes);
+        System.out.println("2. The total numbers of iframes: " + numberOgIframes);
         return this;
     }
 
     @FindBy(id = "mce_0_ifr")
     WebElement iFrame;
 
-    public FramePage switchToIframeById() {
+    @FindBy(tagName = "h3")
+    WebElement textDefaultContent;
+
+    public IframePage switchToIframeById() {
         driver.switchTo().frame(iFrame);
-        System.out.println("Text of the iframe: " + iFrame.getText());
-
-
+        System.out.println("Text: " + text.getText());
+        driver.switchTo().defaultContent();
+        System.out.println("Text: " + textDefaultContent.getText());
         return this;
     }
     @FindBy(xpath = "//iframe[@id='mce_0_ifr']")
@@ -51,9 +55,13 @@ public class FramePage extends BasePage {
     @FindBy(tagName = "p")
     WebElement text;
 
-    public FramePage switchToIframeByIndex(int index) {
+    public IframePage switchToIframeByIndex(int index) {
        driver.switchTo().frame(index);
+        System.out.println("Text: " + text.getText());
        isTextPresent(text, "Your content goes here.");
         return this;
     }
+
+
+
 }
