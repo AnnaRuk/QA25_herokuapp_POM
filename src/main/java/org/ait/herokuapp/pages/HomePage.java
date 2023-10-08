@@ -7,6 +7,9 @@ import org.ait.herokuapp.pages.brockenImg.BrokenImagesPage;
 import org.ait.herokuapp.pages.newTab.WindowPage;
 import org.ait.herokuapp.pages.simple.AbTestingPage;
 import org.ait.herokuapp.pages.simple.DisappearingElementsPage;
+import org.ait.herokuapp.pages.upload.FileUploadPage;
+import org.ait.herokuapp.pages.widgets.CheckboxesPage;
+import org.ait.herokuapp.pages.widgets.DropdownListPage;
 import org.ait.herokuapp.pages.widgets.SliderPage;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -86,5 +89,29 @@ click(formLink);
     public NestedFramePage getNestedFramePage() {
         click(frames);
         return new NestedFramePage(driver);
+    }
+
+
+    @FindBy(xpath = "//a[.='Dropdown']")
+    WebElement dropdownList;
+    public DropdownListPage getDropdownListPage() {
+         click(dropdownList);
+        return new DropdownListPage(driver);
+    }
+
+    @FindBy(xpath = "//a[.='File Upload']")
+    WebElement uploadFile;
+    public FileUploadPage getFileUploadPage() {
+      click(uploadFile);
+        return new FileUploadPage(driver);
+    }
+
+
+
+    @FindBy(xpath = "//a[.='Checkboxes']")
+    WebElement checkboxes;
+    public CheckboxesPage getCheckboxesPage() {
+click(checkboxes);
+        return new CheckboxesPage(driver);
     }
 }
