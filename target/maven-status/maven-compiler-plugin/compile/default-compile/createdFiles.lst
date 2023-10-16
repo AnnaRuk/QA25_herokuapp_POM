@@ -1,0 +1,16 @@
+org\ait\herokuapp\pages\HomePage.class
+org\ait\herokuapp\utils\MyListener.class
+org\ait\herokuapp\pages\JSExecutor.class
+org\ait\herokuapp\pages\widgets\CheckboxesPage.class
+org\ait\herokuapp\pages\alertsFrameWindows\AlertPage.class
+org\ait\herokuapp\pages\simple\DisappearingElementsPage.class
+org\ait\herokuapp\pages\simple\AbTestingPage.class
+org\ait\herokuapp\pages\BasePage.class
+org\ait\herokuapp\pages\brockenImg\BrokenImagesPage.class
+org\ait\herokuapp\pages\upload\FileUploadPage.class
+org\ait\herokuapp\data\UserData.class
+org\ait\herokuapp\pages\alertsFrameWindows\NestedFramePage.class
+org\ait\herokuapp\pages\alertsFrameWindows\IframePage.class
+org\ait\herokuapp\pages\widgets\DropdownListPage.class
+org\ait\herokuapp\pages\widgets\SliderPage.class
+org\ait\herokuapp\pages\newTab\WindowPage.class

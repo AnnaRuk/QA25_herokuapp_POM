@@ -1,0 +1,13 @@
+org\ait\herokuapp\tests\brockenImg\BrokenImageTests.class
+org\ait\herokuapp\tests\upload\FileUploadTests.class
+org\ait\herokuapp\tests\JSExecutorTests.class
+org\ait\herokuapp\tests\alertsFrame\IframeWindowTest.class
+org\ait\herokuapp\tests\newTab\NewTabTest.class
+org\ait\herokuapp\tests\widgets\SelectTest.class
+org\ait\herokuapp\tests\widgets\CheckboxesTest.class
+org\ait\herokuapp\tests\simple\AbTestingPageTest.class
+org\ait\herokuapp\tests\simple\DisElementsPageTest.class
+org\ait\herokuapp\tests\alertsFrame\NestedFrameTest.class
+org\ait\herokuapp\tests\widgets\SliderTest.class
+org\ait\herokuapp\tests\TestBase.class
+org\ait\herokuapp\tests\alertsFrame\AlertTests.class
